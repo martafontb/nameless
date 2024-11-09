@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Nirvana';
+    src: url('../assets/fonts/NIRVANA.TTF') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Black';
+    src: url('../assets/fonts/Arialblack.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url('../assets/images/background.jpg') center/cover no-repeat;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.logo {
+    font-size: clamp(4.5rem, 15vw, 12rem); 
+    font-family: 'Nirvana', sans-serif;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    letter-spacing: clamp(20px, 4vw, 60px); 
+    text-transform: uppercase;
+    line-height: 1.1; 
+    word-wrap: break-word; 
+}
+
+.studios {
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.button-container {
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+button {
+    appearance: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    font-family: 'Arial Black', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.instagram-button {
+    padding: 12px 20px;
+}
+
+.button:hover {
+    mix-blend-mode: exclusion;
+}
+
+.instagram-icon:hover svg {
+    fill: black;
+}
+
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: all 0.3s ease;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 25px;
+    opacity: 0;
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+}
