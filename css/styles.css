@@ -16,15 +16,14 @@
     font-display: swap;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+html {
+    height: -webkit-fill-available;
 }
 
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* iOS Safari */
+    margin: 0;
+    height: 100vh;
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,22 +33,18 @@ body {
     font-family: 'Arial Black', sans-serif;
     padding: 20px;
     box-sizing: border-box;
-    overflow-x: hidden;
-}
-
-/* iOS Safari specific fix */
-@supports (-webkit-touch-callout: none) {
-    body {
-        min-height: -webkit-fill-available;
-    }
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
 }
 
 .logo-container {
-    margin: auto 0;
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
 }
 
 .logo {
@@ -60,7 +55,6 @@ body {
     text-transform: uppercase;
     line-height: 1.1; 
     word-wrap: break-word;
-    max-width: 100%;
 }
 
 .studios {
@@ -70,12 +64,11 @@ body {
 }
 
 .button-container {
-    margin-top: auto;
-    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    padding-bottom: 20px;
 }
 
 button {
@@ -140,16 +133,8 @@ button {
 
 /* Mobile optimizations */
 @media screen and (max-height: 600px) {
-    .logo-container {
-        margin: 20px 0;
-    }
-    
     .logo {
         font-size: clamp(3rem, 12vw, 8rem);
         letter-spacing: clamp(15px, 3vw, 40px);
-    }
-    
-    .button-container {
-        padding: 10px 0;
     }
 }
