@@ -47,14 +47,17 @@ body {
     width: 100%;
 }
 
-.logo {
+
+.logo-flex {
     font-size: clamp(4.5rem, 15vw, 12rem); 
     font-family: 'Nirvana', sans-serif;
-    margin-bottom: clamp(10px, 2vw, 20px);
-    letter-spacing: clamp(20px, 4vw, 60px); 
+    margin-bottom: clamp(20px, 2vw, 40px);
     text-transform: uppercase;
-    line-height: 1.1; 
-    word-wrap: break-word;
+    line-height: 1.1;
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 60px);
+    font-weight: 400;
 }
 
 .studios {
