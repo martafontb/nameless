@@ -95,6 +95,8 @@ button {
     transition: all 0.3s ease;
 }
 
+
+
 .instagram-button {
     padding: 12px 20px;
 }
@@ -112,6 +114,19 @@ button {
     height: 24px;
     fill: white;
     transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 600px) {
+    .button {
+        padding: 12px 20px;
+        font-size: 1.25rem;
+    }
+
+    .instagram-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
 }
 
 .toast {
